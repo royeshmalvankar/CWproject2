@@ -1,0 +1,80 @@
+import Navbar from "./navbar"
+import { useState,useEffect,useContext } from "react"
+import { AuthContext } from "../authcontext/AuthContext"
+import axios from "axios"
+import Loding from "../loding&error/Loding"
+import Error from "../loding&error/Error"
+
+const Genre=()=>{
+    const [data1,setData1] = useState([])
+    const [gd, setgd] = useState("")
+    const {setLoding, isLoding,setError, isError} = useContext(AuthContext)
+    const [page, setPage] = useState(1)
+
+    useEffect(() => {
+        fetchData()
+    },[gd,page])
+
+    
+    const fetchData = async () => {
+        setLoding(true)
+        try {
+            const response = await axios.get(`http://localhost:8080/movies?_page=${page}&_per_page=10&${gd}`)
+            setData1(response.data)
+            setLoding(false)
+        } catch (error) {
+            setError(true)
+        }
+        setError(false)
+        setLoding(false)
+    }
+    if (isLoding) {
+        return(
+            <Loding/>
+        )
+        
+    }
+    if (isError) {
+        return(
+            <Error/>
+        )
+    }
+    console.log(data1);
+    console.log(gd);
+    return(
+        <>
+        <div className="genre">
+            <button onClick={()=>{setgd("genre=Action"),setPage(1)}}>Action</button>
+            <button onClick={()=>{setgd("genre=Adventure"),setPage(1)}}>Adventure</button>
+            <button onClick={()=>{setgd("genre=Sci-Fi"),setPage(1)}}>Sci-Fi</button>
+            <button onClick={()=>{setgd("genre=Romance"),setPage(1)}}>Romance</button>
+            <button onClick={()=>{setgd("genre=Horror"),setPage(1)}}>Horrer</button>
+            <button onClick={()=>{setgd("genre=Mystery"),setPage(1)}}>Mystery</button>
+            <button onClick={()=>{setgd("genre=Comedy"),setPage(1)}}>Comedy</button>
+        </div>
+        <div className="page">
+                <button onClick={() => setPage(page - 1)} disabled={page === 1}>Previous</button>
+                <button onClick={() => setPage(page + 1)} disabled={data1.length < 10}>Next</button>
+            </div>
+        <div className="movie-container">
+       
+                {data1.map((movie) => {
+                    {console.log(data1)}
+                    return(
+                    <div key={movie.imdbID} className="movie">
+                        <img src={movie.poster} alt="" />
+                        <h2>{movie.title}</h2>
+                        <p>{movie.year}</p>
+                    </div>
+                    )
+                    })}
+    
+            </div>
+            <div className="page">
+                <button onClick={() => setPage(page - 1)} disabled={page === 1}>Previous</button>
+                <button onClick={() => setPage(page + 1)} disabled={data1.length < 10}>Next</button>
+            </div>
+        </>
+    )
+}
+export default Genre

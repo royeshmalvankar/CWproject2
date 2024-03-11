@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* background-color: gray; */
+}
+/* .App{
+    background-image: linear-gradient( red,orange,yellow,violet);
+    background-size: cover;
+} */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 10px;
+   text-decoration: none;
+}
+
+input{
+    text-align: center;
+}
+.movie{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5px;
+    padding: 20px;
+    background-image: linear-gradient( red,orange,yellow,violet);
+    background-color: white;
+    text-align: center;
+
+}
+.movie-container{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    padding: 30px;
+    gap: 50px;
+    width: auto;
+    height: auto;
+    
+    
+}
+.movie:hover{
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    margin-top: -10px;
+}
+.movie img{
+   height: 400px;
+   width: 300px;
+}
+.search{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 5px;
+}
+.genre{
+    display: flex;
+    justify-content: space-evenly;
+}
+.genre button{
+    border-radius: 5px;
+    padding: 10px;
+    background-color: white;
+    color: blue;
+    margin-top: 50px;
+}
+button{
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    color: red;
+    margin: 20px;
+    cursor: pointer;
+}
+.page{
+    display: flex;
+    justify-content: space-between;
+}
+.nav1{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px;
+    margin-left: 37%;
+}
+.nav2{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px;
+}
+.details{
+    border: 1px dashed black;
+    padding: 10px;
+    text-align: center;
+    width: 500px;
+    height: 300px;
+    margin: auto;
+}
