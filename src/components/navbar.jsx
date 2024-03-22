@@ -18,7 +18,7 @@ const Navbar =()=>{
                 </div>
                 <div className="nav2">
                 {IsAuth?<h1 onClick={()=>{setIsAuth(false),Navigate("/login")}} style={css}>Logout</h1>:<Link to="/login" style={css}><h1>Login</h1></Link>}
-                    <Link to="/register" style={css}><h1>Register</h1></Link>
+                 {IsAuth?<h1></h1>:<Link to="/register" style={css}><h1>Register</h1></Link>}
 
                 </div>
             </nav>

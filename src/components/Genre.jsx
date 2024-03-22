@@ -1,9 +1,11 @@
 import Navbar from "./navbar"
 import { useState,useEffect,useContext } from "react"
 import { AuthContext } from "../authcontext/AuthContext"
+import { Link } from "react-router-dom"
 import axios from "axios"
 import Loding from "../loding&error/Loding"
 import Error from "../loding&error/Error"
+
 
 const Genre=()=>{
     const [data1,setData1] = useState([])
@@ -39,8 +41,6 @@ const Genre=()=>{
             <Error/>
         )
     }
-    console.log(data1);
-    console.log(gd);
     return(
         <>
         <div className="genre">
@@ -59,13 +59,12 @@ const Genre=()=>{
         <div className="movie-container">
        
                 {data1.map((movie) => {
-                    {console.log(data1)}
                     return(
-                    <div key={movie.imdbID} className="movie">
+                        <Link style={{ textDecoration: "none" }} to={`/movieselect/${movie.id}`}><div key={movie.id} className="movie">
                         <img src={movie.poster} alt="" />
                         <h2>{movie.title}</h2>
                         <p>{movie.year}</p>
-                    </div>
+                    </div></Link>
                     )
                     })}
     

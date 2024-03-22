@@ -21,9 +21,12 @@ const Login = () => {
         data.map((ele)=>{
             console.log(logemail,logpassword);
             if (ele.email===logemail && ele.password===logpassword){
-                console.log("login success");
+                alert("login success");
                 setIsAuth(true)
                 navigate("/")
+            }
+            else{
+                alert("login failed");
             }
         })
         }

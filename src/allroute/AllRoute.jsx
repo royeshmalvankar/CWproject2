@@ -10,6 +10,7 @@ import HigestRated from '../components/HigestRated'
 import Favorites from '../components/Favorites'
 import AddMovie from '../components/Addmovies'
 import PrivateRoute from '../PrivateRoute/PrivateRoute'
+import Movieselect from '../components/Movieselect'
 const AllRoute = () => {
     return (
         <>
@@ -20,6 +21,7 @@ const AllRoute = () => {
             <Route path='/login' element={<Login/>}/>
             <Route path='/register' element={<Register/>}/>
             <Route path='/higestrated' element={<PrivateRoute><HigestRated/></PrivateRoute>}/>
+            <Route path='/movieselect/:id' element={<PrivateRoute><Movieselect/></PrivateRoute>}/>
             {/* <Route path='/favorites' element={<PrivateRoute><Favorites/></PrivateRoute>}/> */}
             <Route path='/addmovies' element={<PrivateRoute><AddMovie/></PrivateRoute>}/>
         </Routes>
