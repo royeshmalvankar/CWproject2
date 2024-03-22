@@ -12,6 +12,7 @@ const Genre=()=>{
     const [gd, setgd] = useState("")
     const {setLoding, isLoding,setError, isError} = useContext(AuthContext)
     const [page, setPage] = useState(1)
+    const [lastpage, setLastpage] = useState(0)
 
     useEffect(() => {
         fetchData()
@@ -22,7 +23,9 @@ const Genre=()=>{
         setLoding(true)
         try {
             const response = await axios.get(`http://localhost:8080/movies?_page=${page}&_per_page=10&${gd}`)
+            const response2 =  await axios.get(`http://localhost:8080/movies?${gd}`)
             setData1(response.data)
+            setLastpage(Math.ceil(response2.data.length/10))
             setLoding(false)
         } catch (error) {
             setError(true)
@@ -41,6 +44,7 @@ const Genre=()=>{
             <Error/>
         )
     }
+    console.log(lastpage)
     return(
         <>
         <div className="genre">
@@ -54,6 +58,8 @@ const Genre=()=>{
         </div>
         <div className="page">
                 <button onClick={() => setPage(page - 1)} disabled={page === 1}>Previous</button>
+                {data1.length<10?<button onClick={() => setPage(1)}>First Page</button>:<button onClick={() => setPage(lastpage)}>Last Page</button>}
+                
                 <button onClick={() => setPage(page + 1)} disabled={data1.length < 10}>Next</button>
             </div>
         <div className="movie-container">
@@ -71,6 +77,7 @@ const Genre=()=>{
             </div>
             <div className="page">
                 <button onClick={() => setPage(page - 1)} disabled={page === 1}>Previous</button>
+                {data1.length<10?<button onClick={() => setPage(1)}>First Page</button>:<button onClick={() => setPage(lastpage)}>Last Page</button>}
                 <button onClick={() => setPage(page + 1)} disabled={data1.length < 10}>Next</button>
             </div>
         </>

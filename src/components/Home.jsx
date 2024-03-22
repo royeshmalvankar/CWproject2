@@ -13,6 +13,7 @@ const Home = () => {
     const [sd, setSd] = useState("")
     const [page, setPage] = useState(1)
     const [lastpage, setLastpage] = useState(0)
+    
 
     useEffect(() => {
         const timer=setTimeout(() => {
