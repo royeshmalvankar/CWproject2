@@ -4,7 +4,7 @@ export const AuthContext = createContext()
 
 export const AuthContextProvider = ({children}) => {
 
-    const [IsAuth, setIsAuth] = useState(true)
+    const [IsAuth, setIsAuth] = useState(false)
     const [data, setData] = useState([])
     const [isLoding, setLoding] = useState(true)
     const [isError, setError] = useState(true)
