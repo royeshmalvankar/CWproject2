@@ -10,7 +10,7 @@ import HigestRated from '../components/HigestRated'
 import Favorites from '../components/Favorites'
 import AddMovie from '../components/Addmovies'
 import PrivateRoute from '../PrivateRoute/PrivateRoute'
-import Movieselect from '../components/movieselect'
+import Movieselect from '../components/Movieselect'
 import Nodata from '../components/Nodata'
 import Pagenotfound from '../components/Pagenotfound'
 const AllRoute = () => {
