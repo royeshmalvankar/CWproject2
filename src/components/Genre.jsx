@@ -44,7 +44,6 @@ const Genre=()=>{
             <Error/>
         )
     }
-    console.log(lastpage)
     return(
         <>
         <div className="genre">

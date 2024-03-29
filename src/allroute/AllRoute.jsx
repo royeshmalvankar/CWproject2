@@ -10,11 +10,14 @@ import HigestRated from '../components/HigestRated'
 import Favorites from '../components/Favorites'
 import AddMovie from '../components/Addmovies'
 import PrivateRoute from '../PrivateRoute/PrivateRoute'
-import Movieselect from '../components/Movieselect'
+import Movieselect from '../components/movieselect'
+import Nodata from '../components/Nodata'
+import Pagenotfound from '../components/Pagenotfound'
 const AllRoute = () => {
     return (
         <>
         <Navbar/>
+        <div className='space'></div>
         <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/genre' element={<PrivateRoute><Genre/></PrivateRoute>}/>
@@ -24,6 +27,8 @@ const AllRoute = () => {
             <Route path='/movieselect/:id' element={<PrivateRoute><Movieselect/></PrivateRoute>}/>
             {/* <Route path='/favorites' element={<PrivateRoute><Favorites/></PrivateRoute>}/> */}
             <Route path='/addmovies' element={<PrivateRoute><AddMovie/></PrivateRoute>}/>
+            <Route path='/nodata' element={<Nodata/>}/>
+            <Route path='*' element={<Pagenotfound/>}/>
         </Routes>
         </>
     )

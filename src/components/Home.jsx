@@ -5,14 +5,16 @@ import Navbar from "./navbar"
 import "../App.css"
 import Loding from "../loding&error/Loding"
 import Error from "../loding&error/Error"
-import { Link } from "react-router-dom"
+import { Link, Navigate } from "react-router-dom"
 import { Button } from "@chakra-ui/react"
+import Nodata from "./Nodata"
 
 const Home = () => {
     const {data, setData,setLoding, isLoding,setError, isError,setfav} = useContext(AuthContext)
     const [sd, setSd] = useState("")
     const [page, setPage] = useState(1)
     const [lastpage, setLastpage] = useState(0)
+    const [responses, setResponses] = useState(false)
     
 
     useEffect(() => {
@@ -32,6 +34,12 @@ const Home = () => {
        try {
          const response =  await axios.get(`http://localhost:8080/movies?q=${sd}&_page=${page}&_per_page=10`)
          const response2 =  await axios.get(`http://localhost:8080/movies`)
+         if(response.data.length===0){
+            setResponses(true)
+         }
+         else{
+            setResponses(false)
+         }
          setData(response.data)
          setLastpage(Math.ceil(response2.data.length/10))
          setLoding(false)
@@ -52,6 +60,11 @@ const Home = () => {
             <Error/>
         )
         
+    }
+    if(responses){
+        return(
+           <Navigate to={"/nodata"} />
+        )
     }
     return (
         <>

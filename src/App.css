@@ -10,13 +10,25 @@
     background-size: cover;
 } */
 .navbar{
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     gap: 30px;
     padding: 10px;
    text-decoration: none;
+   background-color: black;
+   color: white;
 }
-
+.space{
+    height: 70px;
+}
+.pagenotfound{
+    text-align: center;
+}
+.nodata{
+    text-align: center;
+}
 input{
     text-align: center;
 }

@@ -49,6 +49,7 @@ const Movieselect = () => {
             <p><span>Type: </span>{data.type}</p>
             <p><span>Rating: </span>{data.rating}</p>
             <p><span>Genre: </span>{data.genre}</p>
+            <button >Add To Favorites</button>
         </div>
     )
 }
