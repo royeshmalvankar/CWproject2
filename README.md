@@ -12,11 +12,6 @@ Pagination: Navigate through multiple pages of search results.
 
 
 
-
-
-
-
-
 Technologies Used
 Frontend: HTML, CSS, JavaScript
 Backend: Node.js, Express.js
@@ -24,6 +19,7 @@ Database: MongoDB
 Hosting: Netlify
 
 Usage
+
 Navigate to the home page to see a list of movies.
 Use the search bar to find specific movies by title.
 Click on a movie to view more details.
