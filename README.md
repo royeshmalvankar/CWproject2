@@ -28,11 +28,9 @@ Register or login to add movies to your personal collection.
 Contributing
 If you'd like to contribute to this project, please fork the repository and use a feature branch. Pull requests are welcome.
 
-Installation
-
-Clone the repository:
-
 ![Screenshot 2024-08-05 152915](https://github.com/user-attachments/assets/43ab0fb6-0181-40e4-829c-63b359fc42f3)
+
+
 
 
 ![Screenshot 2024-08-01 130902](https://github.com/user-attachments/assets/e2c96751-f304-45f8-8f5c-62bd8d727e6d)
