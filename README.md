@@ -32,10 +32,7 @@ Installation
 
 Clone the repository:
 
-https://github.com/royeshmalvankar/CWproject2
-cd CWproject
-
-![Screenshot 2024-08-05 152007](https://github.com/user-attachments/assets/3e348d60-e97c-4be9-9f67-cf44754e2087)
+![Screenshot 2024-08-05 152915](https://github.com/user-attachments/assets/f0547749-bd88-4842-b60c-d331f455f644)
 
 
 bash
