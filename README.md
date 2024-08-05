@@ -34,9 +34,7 @@ Clone the repository:
 
 ![Screenshot 2024-08-05 152915](https://github.com/user-attachments/assets/43ab0fb6-0181-40e4-829c-63b359fc42f3)
 
-bash
-Copy code
-npm install
+
 ![Screenshot 2024-08-01 130902](https://github.com/user-attachments/assets/e2c96751-f304-45f8-8f5c-62bd8d727e6d)
 ![Screenshot 2024-08-05 144952](https://github.com/user-attachments/assets/99fb38d3-35bd-4fa5-ba6d-eab8a9f8b59b)
 ![Screenshot 2024-08-05 145133](https://github.com/user-attachments/assets/78a6eb32-dcb6-46c5-96d1-8a12de295b19)
