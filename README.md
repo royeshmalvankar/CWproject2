@@ -32,8 +32,7 @@ Installation
 
 Clone the repository:
 
-![Screenshot 2024-08-05 152915](https://github.com/user-attachments/assets/f0547749-bd88-4842-b60c-d331f455f644)
-
+![Screenshot 2024-08-05 152915](https://github.com/user-attachments/assets/43ab0fb6-0181-40e4-829c-63b359fc42f3)
 
 bash
 Copy code
