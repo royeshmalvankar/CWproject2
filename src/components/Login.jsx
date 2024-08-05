@@ -35,12 +35,10 @@ const Login = () => {
                 alert("login success");
                 navigate("/")
                 }
-                else{
-                alert("login failed");
-                }
             }
         })
         if (flag==false){
+            alert("login failed");
             alert("Check Email and Password or if you are new Register first");
         }
         
