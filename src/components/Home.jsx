@@ -8,6 +8,7 @@ import Error from "../loding&error/Error"
 import { Link, Navigate } from "react-router-dom"
 import { Button } from "@chakra-ui/react"
 import Nodata from "./Nodata"
+import Filterandsorting from "./Filterandsorting"
 
 const Home = () => {
     const {data, setData,setLoding, isLoding,setError, isError,setfav} = useContext(AuthContext)
@@ -72,6 +73,7 @@ const Home = () => {
             <div className="search">
                 <label>Search: </label>
                 <input name="scr" type="text" placeholder="search" value={sd} onChange={search} />
+                {/* <Filterandsorting fetchData={fetchData}/> */}
             </div>
             <div className="page">
                 <button onClick={() => setPage(page - 1)} disabled={page === 1}>Previous</button>

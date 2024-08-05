@@ -1,5 +1,5 @@
 //libraries
-import React,{useContext,useState} from "react";
+import React,{useContext,useEffect,useState} from "react";
 import {  useNavigate } from "react-router-dom";
 import { AuthContext } from "../authcontext/AuthContext";
 import axios from "axios";
@@ -9,28 +9,44 @@ const Login = () => {
     const navigate = useNavigate();
     const {logemail, setlogemail,logpassword,setlogpassword,setIsAuth,IsAuth}=useContext(AuthContext);
     const [data,setdata] = useState([])
-    async function handleSubmit(){
+    useEffect(()=>{
+        fetchlogin()
+    },[])
+
+    const fetchlogin = async()=>{
         try {
             let response = await axios.get(`http://localhost:3001/Ldata`)
             setdata(response.data)
             console.log("render")
+            console.log(data);
             
         } catch (error) {
             console.log(error);
         }
-        data.map((ele)=>{
-            console.log(logemail,logpassword);
-            if (ele.email===logemail && ele.password===logpassword){
-                alert("login success");
+    }
+    async function handleSubmit(){
+       let flag=false
+        data.forEach((ele)=>{
+            if (ele.email==logemail){
+                if (ele.password==logpassword){
+                console.log(logemail,logpassword);
+                flag=true
                 setIsAuth(true)
+                alert("login success");
                 navigate("/")
-            }
-            else{
+                }
+                else{
                 alert("login failed");
+                }
             }
         })
+        if (flag==false){
+            alert("Check Email and Password or if you are new Register first");
         }
-    console.log("auth",IsAuth);
+        
+    }
+
+    // console.log("auth",IsAuth);
 
     return (
         <>
