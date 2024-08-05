@@ -1,10 +1,12 @@
 Movie Search Application
 
-Overview:
+Overview:-
+
 This project is a web-based application for searching and displaying movies. Users can search for movies, view details, and manage their movie collection. The application features a search bar, genre filtering, and user authentication for login and registration.
 
 
-Features:
+Features:-  
+
 Movie Search: Search for movies by title.
 Movie Display: View movie details including title, release year, and poster.
 User Authentication: Register and login to manage movie collections.
@@ -13,14 +15,16 @@ Pagination: Navigate through multiple pages of search results.
 
 
 
-Technologies Used:
+Technologies Used:-  
+
 Frontend: HTML, CSS, JavaScript
 Backend: Node.js, Express.js
 Database: MongoDB
 Hosting: Netlify
 
 
-Usage:
+Usage:-
+
 Navigate to the home page to see a list of movies.
 Use the search bar to find specific movies by title.
 Click on a movie to view more details.
