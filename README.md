@@ -29,10 +29,11 @@ Contributing
 If you'd like to contribute to this project, please fork the repository and use a feature branch. Pull requests are welcome.
 
 Installation
+
 Clone the repository:
+
 https://github.com/royeshmalvankar/CWproject2
-git clone https://github.com/royeshmalvankar/CWproject2.git
-cd moviesearchapp
+cd CWproject
 
 ![Screenshot 2024-08-05 152007](https://github.com/user-attachments/assets/3e348d60-e97c-4be9-9f67-cf44754e2087)
 
